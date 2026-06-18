@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdraví Dnes | "Zlatá Tekutina" kterou čeští diabetici právě objevují</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #f0ece4;
+            color: #222;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .topbar {
+            background-color: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            font-family: Arial, sans-serif;
+        }
+        .topbar span { color: #FFD700; font-weight: bold; }
+
+        .site-header {
+            background: #fff;
+            border-bottom: 3px solid #c8102e;
+            padding: 14px 0;
+            text-align: center;
+        }
+        .site-header .brand {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+        .site-header .tagline {
+            font-size: 11px;
+            color: #888;
+            font-family: Arial, sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .category-label {
+            max-width: 760px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c8102e;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 10px auto 40px;
+            background: #fff;
+            padding: 34px 40px 40px;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            line-height: 1.3;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        .deck {
+            font-size: 18px;
+            color: #444;
+            border-left: 4px solid #c8102e;
+            padding-left: 14px;
+            margin: 14px 0 18px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .byline {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #888;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 14px;
+            margin-bottom: 24px;
+        }
+        .byline strong { color: #555; }
+
+        p { margin-bottom: 20px; }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            color: #1a1a1a;
+            margin: 32px 0 14px;
+            line-height: 1.35;
+        }
+
+        .pull-quote {
+            border-top: 2px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            margin: 32px 0;
+            padding: 18px 24px;
+            font-size: 20px;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .article-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 26px 0 8px;
+            border: 1px solid #ddd;
+        }
+        .img-caption {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            background: #fffbea;
+            border: 1px solid #e8c900;
+            border-left: 5px solid #FFD700;
+            padding: 18px 22px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+        .highlight-box strong { color: #7a5c00; }
+
+        .cta-wrap {
+            text-align: center;
+            margin: 36px 0 12px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 18px 36px;
+            background: #FFD700;
+            color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+            line-height: 1.4;
+        }
+        .cta-button:hover { background: #e6c200; }
+        .cta-sub {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .footer {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #aaa;
+            text-align: center;
+            line-height: 1.7;
+        }
+        .footer a { color: #aaa; }
+
+        @media (max-width: 600px) {
+            .container { padding: 22px 18px 30px; }
+            h1 { font-size: 23px; }
+            .pull-quote { font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="topbar">
+    ADVERTORIAL &nbsp;|&nbsp; <span>Sponzorovaný obsah</span>
+</div>
+
+<div class="site-header">
+    <div class="brand">Zdraví Dnes</div>
+    <div class="tagline">Nezávislé informace o zdraví</div>
+</div>
+
+<div class="category-label">METABOLISMUS &amp; HLADINA CUKRU V KRVI</div>
+
+<div class="container">
+
+    <h1>Lékař přišel o licenci poté, co svým pacientům odhalil "Zlatou Tekutinu" kontrolující cukr v krvi</h1>
+
+    <div class="deck">
+        Po celá léta žily tisíce Čechů s nekontrolovanou hladinou cukru — ne proto, že řešení neexistovalo, ale proto, že někdo nechtěl, aby se o něm vědělo.
+    </div>
+
+    <div class="byline">
+        Od <strong>Redakce Zdraví Dnes</strong> &nbsp;|&nbsp; Aktualizováno: Červen 2025 &nbsp;|&nbsp; Doba čtení: 4 minuty
+    </div>
+
+    <a href="https://vsl-link-here.com" target="_blank">
+        <img src="img/curious_mechanism_it_v10_hero.png" alt="Zlatá Tekutina — přírodní objev" class="article-img">
+    </a>
+    <p class="img-caption">„Zvláštní mechanismus" znovu objevený přírodní léčbou, který rozjitřuje českou lékařskou komunitu.</p>
+
+    <p>
+        Pokud je vám přes 60 let a žijete s diabetem nebo vysokou hladinou cukru v krvi, pravděpodobně ten pocit znáte: únava po jídle, ranní mlha v hlavě, nekonečný seznam věcí, kterým se musíte vyhýbat. Naučili vás svůj stav zvládat — ne řešit.
+    </p>
+
+    <p>
+        Ale v posledních měsících se něco tiše mění. Po celé České republice koluje mezi lékaři, pacienty a nezávislými výzkumníky jeden příběh. Příběh o přírodním prvku — jehož zastánci mu říkají <strong>„Zlatá Tekutina"</strong> — a o lékaři, který za jeho zveřejnění zaplatil velmi vysokou cenu.
+    </p>
+
+    <h2>Lékař, který si dovolil příliš</h2>
+
+    <p>
+        Příběh začíná v Brně před několika lety. Praktický lékař s více než 30 lety zkušeností si začíná všímat něčeho podivného u svých pacientů: ti, kteří z rodinné tradice nebo náhodou užívali tuto starobylou přírodní tekutinu, vykazovali výsledky v metabolismu glukózy, které nedokázal vysvětlit konvenční medicínou.
+    </p>
+
+    <p>
+        Místo aby nálezy ignoroval, začal případy dokumentovat. Pomalu začal tekutinu doporučovat i dalším pacientům. Výsledky se dostavovaly. Zpráva se šířila. A nevyhnutelně se dostala k pozornosti České lékařské komory.
+    </p>
+
+    <div class="pull-quote">
+        „Nic jsem neprodával. Jen jsem říkal pravdu lidem, kteří si ji zasloužili slyšet."
+    </div>
+
+    <p>
+        Kárné řízení bylo rychlé. Licence odebrána. Oficiální zdůvodnění: doporučování léčby bez vědecky ověřeného základu.
+    </p>
+
+    <p>
+        Jenže byl tu jeden detail, který jeho kolegům nedával smysl: žádný z jeho pacientů neutrpěl újmu. Ba naopak.
+    </p>
+
+    <a href="https://vsl-link-here.com" target="_blank">
+        <img src="img/curious_senior_it_v10.png" alt="Starší Čech, který objevil Zlatou Tekutinu" class="article-img">
+    </a>
+    <p class="img-caption">Tisíce Čechů над 60 let tuto metodu objevují — často prostřednictvím doporučení od přátel a rodiny.</p>
+
+    <h2>Co přesně je tato „Zlatá Tekutina"?</h2>
+
+    <p>
+        Není to lék. Nekupuje se na předpis v lékárně. Nevyžaduje žádnou radikální změnu stravy ani životního stylu. Je to přírodní prvek s kořeny v tisíciletých tradicích — jehož studiem se nezávislý výzkum teprve nedávno začal vážněji zabývat.
+    </p>
+
+    <p>
+        Podle těch, kteří ji vyzkoušeli, a podle případů dokumentovaných brněnským lékařem je mechanismus účinku přímý: působí na buňky a obnovuje jejich schopnost správně reagovat na glukózu. Problém nezakrývá — útočí na jeho kořen.
+    </p>
+
+    <div class="highlight-box">
+        <strong>Proč se o tom otevřeně nemluví?</strong><br>
+        Odpověď, kterou dává mnoho nezávislých odborníků, je jednoduchá: nelze to patentovat. Nevytváří to farmaceutické zisky. A proto neexistuje žádná motivace financovat veřejný výzkum ani informovat pacienty.
+    </div>
+
+    <h2>Video, které koluje po celém Česku</h2>
+
+    <p>
+        V posledních týdnech se online šíří video — sdílené z úst do úst mezi diabetickými pacienty, jejich rodinami a lékaři, kteří už mlčet nechtějí. Ve videu je podrobně vysvětleno, odkud tato tekutina pochází, jak funguje mechanismus, který v těle spouští, a hlavně — jak ji správně užívat.
+    </p>
+
+    <p>
+        Nevíme, jak dlouho zůstane dostupné. Takový obsah bývá poměrně pravidelně odstraňován. Pokud jste se sem dostali, je ten správný čas ho zhlédnout teď.
+    </p>
+
+    <div class="cta-wrap">
+        <a href="https://vsl-link-here.com" target="_blank" class="cta-button">
+            ▶ ZHLÉDNĚTE VIDEO NYNÍ<br>
+            <span style="font-size: 14px; font-weight: normal;">Zjistěte, co je „Zlatá Tekutina" a jak skutečně funguje</span>
+        </a>
+        <p class="cta-sub">Zdarma · Dostupné po omezenou dobu</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Zdraví Dnes. Všechna práva vyhrazena.</p>
+    <p>LA FOOD COZINHA PARAENSE LTDA - ME | CNPJ: 65.387.181/0001-04</p>
+    <p>Travessa We 12, 1000 - Coqueiro, Belém - PA, 66.070-260</p>
+    <p><a href="privacy.html">Zásady ochrany osobních údajů</a> &nbsp;|&nbsp; <a href="terms.html">Obchodní podmínky</a></p>
+    <p style="margin-top: 8px;">Sponzorovaný obsah pouze pro informační účely. Nenahrazuje lékařskou péči. Individuální výsledky se mohou lišit. Tento produkt není určen k diagnostice, léčbě ani prevenci jakéhokoli onemocnění.</p>
+</div>
+
+</body>
+</html>
