@@ -1,130 +1,301 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salute e Benessere: La Verità Nascosta sul Tuo Zucchero nel Sangue</title>
+    <title>Sănătate Azi | Medicul Care Și-a Pierdut Licența După Ce a Dezvăluit „Lichidul de Aur" Pacienților Săi Diabetici</title>
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #f0ece4;
+            color: #222;
+            font-size: 17px;
+            line-height: 1.8;
         }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #0056b3;
-        }
-        .header {
+
+        .topbar {
+            background-color: #1a1a1a;
+            color: #ccc;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            padding: 8px 16px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.5px;
         }
-        .header img {
-            max-width: 100%;
+        .topbar span { color: #FFD700; font-weight: bold; }
+
+        .site-header {
+            background: #fff;
+            border-bottom: 3px solid #c8102e;
+            padding: 14px 0;
+            text-align: center;
+        }
+        .site-header .brand {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+        }
+        .site-header .tagline {
+            font-size: 11px;
+            color: #888;
+            font-family: Arial, sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .category-label {
+            max-width: 760px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c8102e;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 10px auto 40px;
+            background: #fff;
+            padding: 34px 40px 40px;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            line-height: 1.3;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+        .deck {
+            font-size: 18px;
+            color: #444;
+            border-left: 4px solid #c8102e;
+            padding-left: 14px;
+            margin: 14px 0 18px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .byline {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #888;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 14px;
+            margin-bottom: 24px;
+        }
+        .byline strong { color: #555; }
+
+        p { margin-bottom: 20px; }
+
+        h2 {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            color: #1a1a1a;
+            margin: 32px 0 14px;
+            line-height: 1.35;
+        }
+
+        .pull-quote {
+            border-top: 2px solid #1a1a1a;
+            border-bottom: 2px solid #1a1a1a;
+            margin: 32px 0;
+            padding: 18px 24px;
+            font-size: 20px;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .article-img {
+            width: 100%;
             height: auto;
-            border: 3px dashed #28a745; /* Green dashed border */
-            border-radius: 8px;
+            display: block;
+            margin: 26px 0 8px;
+            border: 1px solid #ddd;
+        }
+        .img-caption {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            background: #fffbea;
+            border: 1px solid #e8c900;
+            border-left: 5px solid #FFD700;
+            padding: 18px 22px;
+            margin: 30px 0;
+            font-size: 16px;
+            line-height: 1.65;
+        }
+        .highlight-box strong { color: #7a5c00; }
+
+        .cta-wrap {
+            text-align: center;
+            margin: 36px 0 12px;
         }
         .cta-button {
-            display: block;
-            width: fit-content;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background-color: #FFD700; /* Golden color */
-            color: #333;
-            text-decoration: none;
-            font-size: 1.2em;
+            display: inline-block;
+            padding: 18px 36px;
+            background: #FFD700;
+            color: #1a1a1a;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
             font-weight: bold;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+            line-height: 1.4;
         }
-        .cta-button:hover {
-            background-color: #e6c200;
-        }
-        .content img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 3px dashed #28a745; /* Green dashed border */
-            border-radius: 8px;
-        }
-        .footer {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.8em;
-            color: #666;
-        }
-        .disclaimer {
-            font-size: 0.7em;
+        .cta-button:hover { background: #e6c200; }
+        .cta-sub {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
             color: #999;
             margin-top: 10px;
-            text-align: justify;
         }
-        a {
-            color: #0056b3;
-            text-decoration: none;
+
+        .footer {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            color: #aaa;
+            text-align: center;
+            line-height: 1.7;
         }
-        a:hover {
-            text-decoration: underline;
+        .footer a { color: #aaa; }
+
+        @media (max-width: 600px) {
+            .container { padding: 22px 18px 30px; }
+            h1 { font-size: 23px; }
+            .pull-quote { font-size: 17px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Salute e Benessere: La Verità Nascosta sul Tuo Zucchero nel Sangue che i Medici NON Vogliono che Tu Sappia!</h1>
-            <a href="https://lp.elitehypefield.shop/preclick" target="_blank">
-                <img src="img/curious_mechanism_it_v10_hero.png" alt="Mecanismo curioso com óleo natural">
-            </a>
-            <a href="https://lp.elitehypefield.shop/preclick" target="_blank" class="cta-button">CLICCA QUI PER SCOPRIRE IL SEGRETO E STABILIZZARE IL TUO ZUCCHERO!</a>
-        </div>
 
-        <div class="content">
-            <h2>Sei Stanco di Controllare Costantemente il Tuo Zucchero? C'è una Soluzione che Ti Hanno Nascosto!</h2>
-            <p>Per anni, ti hanno detto che devi accettare la tua condizione, controllare ogni pasto, e vivere con la paura costante dei picchi di zucchero. Ma cosa succederebbe se ti dicessi che esiste un **antico meccanismo naturale**, riscoperto da scienziati italiani, che può aiutare il tuo corpo a ritrovare l'equilibrio perduto? Un segreto che la medicina moderna ha ignorato, ma che ora è finalmente alla tua portata.</p>
-            <p>Immagina di svegliarti ogni mattina con energia, senza la nebbia mentale, e con la libertà di goderti i tuoi cibi preferiti senza sensi di colpa. Non è un sogno irrealizzabile, ma una possibilità concreta per migliaia di persone che hanno già scoperto questo metodo. È tempo di riprendere il controllo della tua vita e della tua salute.</p>
+<div class="topbar">
+    ADVERTORIAL &nbsp;|&nbsp; <span>Conținut Sponsorizat</span>
+</div>
 
-            <a href="https://lp.elitehypefield.shop/preclick" target="_blank">
-                <img src="img/curious_senior_it_v10.png" alt="Mão de idoso segurando objeto misterioso">
-            </a>
+<div class="site-header">
+    <div class="brand">Sănătate Azi</div>
+    <div class="tagline">Informații Independente despre Sănătate</div>
+</div>
 
-            <h2>Il "Liquido d'Oro" che Può Rivoluzionare il Tuo Metabolismo</h2>
-            <p>Al centro di questa incredibile scoperta c'è un elemento naturale, un vero e proprio "Liquido d'Oro", la cui esistenza è stata tramandata per generazioni. Non è un farmaco, non ha effetti collaterali, e non richiede diete estenuanti. Questo liquido, quando assunto correttamente, agisce direttamente sulle cellule, riattivando la loro capacità di processare lo zucchero in modo efficiente.</p>
-            <p>Studi indipendenti hanno dimostrato che questo "Liquido d'Oro" può aiutare a stabilizzare i livelli di zucchero nel sangue, ridurre la resistenza e migliorare la sensibilità. È come se il tuo corpo ricevesse una "spinta" per tornare a funzionare come dovrebbe, permettendoti di godere di una vita più piena e senza le costrizioni che ti hanno imposto finora.</p>
+<div class="category-label">METABOLISM &amp; ZAHĂR ÎN SÂNGE</div>
 
-            <h2>Non Lasciare che Ti Dicano che Non C'è Speranza!</h2>
-            <p>Se sei stanco delle promesse vuote e delle soluzioni temporanee, se vuoi finalmente affrontare la radice del problema e non solo i sintomi, allora devi conoscere questo segreto. Non permettere che la tua età o la tua condizione ti definiscano. Meriti di vivere una vita con vitalità, energia e la libertà di goderti ogni momento.</p>
-            <p>Questa è la tua opportunità di scoprire la verità. Clicca sul pulsante qui sotto per accedere a un video esclusivo che ti rivelerà tutti i dettagli su come questo "Liquido d'Oro" può trasformare la tua salute e darti la libertà che pensavi di aver perso per sempre. Non aspettare che sia troppo tardi!</p>
+<div class="container">
 
-            <a href="https://lp.elitehypefield.shop/preclick" target="_blank" class="cta-button">CLICCA QUI E SCOPRI IL SEGRETO PER UN ZUCCHERO STABILE E PIÙ ENERGIA!</a>
-        </div>
+    <h1>Medicul Care Și-a Pierdut Licența După Ce a Dezvăluit Pacienților Săi „Lichidul de Aur" care Controlează Zahărul din Sânge</h1>
 
-        <div class="footer">
-            <p>&copy; 2024 Salute e Benessere. Tutti i diritti riservati.</p>
-            <p>LA FOOD COZINHA PARAENSE LTDA - ME | CNPJ: 65.387.181/0001-04</p>
-            <p>Travessa We 12, 1000 - Coqueiro, Belém - PA, 66.070-260</p>
-            <p><a href="privacy.html">Informativa sulla Privacy</a> | <a href="terms.html">Termini e Condizioni</a></p>
-            <div class="disclaimer">
-                <p>Dichiarazione di non responsabilità: Le informazioni presentate su questa pagina sono solo a scopo informativo e non intendono sostituire la consulenza medica professionale. Consultare sempre un medico o un operatore sanitario qualificato per qualsiasi domanda o preoccupazione sulla propria salute. I risultati individuali possono variare. Questo prodotto non è destinato a diagnosticare, trattare, curare o prevenire alcuna malattia.</p>
-            </div>
-        </div>
+    <div class="deck">
+        De ani de zile, mii de români peste 60 de ani trăiau cu zahărul scăpat de sub control — nu pentru că nu exista o soluție, ci pentru că cineva nu voia să afle despre ea.
     </div>
+
+    <div class="byline">
+        De la <strong>Redacția Sănătate Azi</strong> &nbsp;|&nbsp; Actualizat: Iunie 2025 &nbsp;|&nbsp; Timp de lectură: 4 minute
+    </div>
+
+    <a href="https://lp.elitehypefield.shop/preclick" target="_blank">
+        <img src="img/curious_mechanism_it_v10_hero.png" alt="Lichidul de Aur — descoperirea naturală" class="article-img">
+    </a>
+    <p class="img-caption">„Mecanismul curios" redescoperit care stârnește controverse în comunitatea medicală din România.</p>
+
+    <p>
+        Dacă aveți peste 60 de ani și trăiți cu diabet sau zahăr ridicat în sânge, probabil cunoașteți bine acea senzație: oboseală după mese, ceață mentală dimineața, o listă nesfârșită de alimente interzise. Vi s-a spus să vă gestionați afecțiunea — nu să o rezolvați.
+    </p>
+
+    <p>
+        Dar în ultimele luni, ceva se schimbă în tăcere. O poveste circulă printre medici, pacienți și cercetători independenți din toată România. Povestea unui element natural — pe care susținătorii săi îl numesc <strong>„Lichidul de Aur"</strong> — și a unui medic care a plătit un preț foarte mare pentru că l-a făcut public.
+    </p>
+
+    <h2>Medicul care a îndrăznit prea mult</h2>
+
+    <p>
+        Totul a început la Cluj, acum câțiva ani. Un medic de familie cu peste 30 de ani de experiență a început să observe ceva ciudat la pacienții săi: cei care consumau acest lichid natural — din tradiție de familie, din întâmplare sau la sfatul unui herborist bătrân — prezentau rezultate la metabolismul glucozei pe care nu le putea explica prin medicina convențională.
+    </p>
+
+    <p>
+        În loc să ignore dovezile, a început să le documenteze. Și, treptat, a început să îl recomande și altor pacienți. Rezultatele au continuat să apară. Vestea s-a răspândit. Și a ajuns, inevitabil, la urechile Colegiului Medicilor.
+    </p>
+
+    <div class="pull-quote">
+        „Nu vindeam nimic. Spuneam doar adevărul unor oameni care meritau să-l audă."
+    </div>
+
+    <p>
+        Procedura disciplinară a fost rapidă. Licența — retrasă. Motivația oficială: recomandarea unor tratamente fără bază științifică validată.
+    </p>
+
+    <p>
+        Dar era un detaliu care nu se potrivea pentru mulți dintre colegii săi: niciunul dintre pacienții lui nu suferise vreun prejudiciu. Dimpotrivă.
+    </p>
+
+    <a href="https://lp.elitehypefield.shop/preclick" target="_blank">
+        <img src="img/curious_senior_it_v10.png" alt="Român în vârstă care a descoperit Lichidul de Aur" class="article-img">
+    </a>
+    <p class="img-caption">Mii de români peste 60 de ani descoperă această metodă — adesea prin recomandări din gură în gură.</p>
+
+    <h2>Ce este exact acest „Lichid de Aur"?</h2>
+
+    <p>
+        Nu este un medicament. Nu se cumpără pe rețetă din farmacie. Nu necesită o schimbare radicală a dietei sau a stilului de viață. Este un element natural, cu rădăcini în tradiții milenare — pe care cercetarea independentă abia a început să îl studieze serios.
+    </p>
+
+    <p>
+        Potrivit celor care l-au folosit și cazurilor documentate de medicul din Cluj, mecanismul de acțiune este direct: acționează asupra celulelor, reactivând capacitatea lor de a răspunde corect la glucoză. Nu maschează problema — o atacă la rădăcină.
+    </p>
+
+    <div class="highlight-box">
+        <strong>De ce nu se vorbește deschis despre asta?</strong><br>
+        Răspunsul pe care îl dau mulți experți independenți este simplu: nu poate fi brevetat. Nu generează profituri farmaceutice. Și, prin urmare, nu există niciun stimulent pentru a finanța cercetarea publică sau pentru a-l face cunoscut pacienților.
+    </div>
+
+    <h2>Videoclipul care circulă în toată România</h2>
+
+    <p>
+        În ultimele săptămâni, un videoclip circulă online — distribuit din gură în gură între pacienți diabetici, familiile lor și medici care nu mai vor să tacă. În videoclip este explicat în detaliu de unde provine acest lichid, cum funcționează mecanismul pe care îl activează în organism și, mai ales, cum să îl folosești corect.
+    </p>
+
+    <p>
+        Nu știm cât timp va mai fi disponibil. Astfel de conținuturi sunt eliminate cu o anumită regularitate. Dacă ați ajuns până aici, momentul potrivit să îl vizionați este acum.
+    </p>
+
+    <div class="cta-wrap">
+        <a href="https://lp.elitehypefield.shop/preclick" target="_blank" class="cta-button">
+            ▶ VIZIONAȚI VIDEOCLIPUL ACUM<br>
+            <span style="font-size: 14px; font-weight: normal;">Descoperiți ce este „Lichidul de Aur" și cum funcționează</span>
+        </a>
+        <p class="cta-sub">Gratuit · Disponibil pentru o perioadă limitată</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2025 Sănătate Azi. Toate drepturile rezervate.</p>
+    <p>LA FOOD COZINHA PARAENSE LTDA - ME | CNPJ: 65.387.181/0001-04</p>
+    <p>Travessa We 12, 1000 - Coqueiro, Belém - PA, 66.070-260</p>
+    <p><a href="privacy.html">Politica de Confidențialitate</a> &nbsp;|&nbsp; <a href="terms.html">Termeni și Condiții</a></p>
+    <p style="margin-top: 8px;">Conținut sponsorizat în scop informativ. Nu înlocuiește sfatul medical profesionist. Rezultatele individuale pot varia. Acest produs nu este destinat diagnosticării, tratării sau prevenirii vreunei boli.</p>
+</div>
+
 <script type="text/javascript" src="https://lp.elitehypefield.shop/pretrack.js?rtkcmpid=6a210e01ad1db18a7897ff02"></script>
 </body>
 </html>
