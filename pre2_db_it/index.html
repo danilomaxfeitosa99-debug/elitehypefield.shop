@@ -146,6 +146,8 @@
             color: #888;
             margin-top: 8px;
         }
+
+        /* FOOTER */
         .footer {
             background-color: #222;
             color: #aaa;
@@ -167,6 +169,49 @@
         .footer a { color: #ddd; text-decoration: none; margin: 0 10px; }
         .footer a:hover { text-decoration: underline; color: #fff; }
         .company-info { margin-top: 18px; font-weight: bold; color: #ccc; }
+
+        /* ACCORDION */
+        .accordion { margin-top: 24px; border-top: 1px solid #444; }
+        .accordion-item { border-bottom: 1px solid #444; }
+        .accordion-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            color: #ccc;
+            text-align: left;
+            padding: 14px 16px;
+            font-size: 0.85em;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .accordion-btn:hover { color: #fff; }
+        .accordion-btn .icon { font-size: 1.1em; transition: transform 0.2s; }
+        .accordion-btn.open .icon { transform: rotate(45deg); }
+        .accordion-content {
+            display: none;
+            padding: 0 16px 16px;
+            text-align: left;
+            font-size: 0.78em;
+            line-height: 1.6;
+            color: #999;
+        }
+        .accordion-content.open { display: block; }
+        .accordion-content h4 {
+            color: #ccc;
+            margin: 14px 0 6px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .accordion-content p { margin-bottom: 10px; }
+        .accordion-content ul { margin: 8px 0 10px 18px; }
+        .accordion-content ul li { margin-bottom: 4px; }
+
         @media (max-width: 600px) {
             .container { margin: 0; padding: 16px; border-radius: 0; }
             h1 { font-size: 1.55em; }
@@ -250,24 +295,137 @@
 
 <div class="footer">
     <div class="footer-content">
+
         <div class="disclaimer-box">
-            <strong>AVVISO IMPORTANTE:</strong> Questo sito web non fa parte del sito Facebook né di Facebook Inc. Questo sito non è in alcun modo supportato da Facebook. Questo sito web e il suo contenuto hanno scopo esclusivamente informativo ed educativo. Le informazioni qui contenute non costituiscono consulenza medica. I risultati possono variare e non sono garantiti. <strong>La storia e le persone presentate nell'articolo hanno scopo illustrativo.</strong> Consultare sempre il proprio medico prima di iniziare qualsiasi nuovo programma per la salute.
+            <strong>AVVISO PUBBLICITARIO:</strong> Questa è una comunicazione pubblicitaria e non un articolo giornalistico. Questo sito web e il suo contenuto hanno scopo esclusivamente informativo ed educativo. Le informazioni qui contenute non costituiscono consulenza medica. I risultati possono variare e non sono garantiti. <strong>La storia e le persone presentate nell'articolo hanno scopo illustrativo.</strong> Consultare sempre il proprio medico prima di iniziare qualsiasi nuovo programma per la salute.
         </div>
+
         <p>
-            <a href="./privacy.html">Informativa sulla privacy</a> |
-            <a href="./terms.html">Termini di utilizzo</a> |
             <a href="mailto:contato@hyperelitedigital.com.br">Contatto</a>
         </p>
+
         <div class="company-info">
             FONTS NEXUS LTDA<br>
             CNPJ: 67.232.158/0001-68<br>
             Brasil
         </div>
+
+        <!-- ACCORDION -->
+        <div class="accordion">
+
+            <!-- DISCLAIMER -->
+            <div class="accordion-item">
+                <button class="accordion-btn" onclick="toggleAccordion(this)">
+                    Disclaimer <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <h4>Dichiarazione pubblicitaria</h4>
+                    <p>Questo sito è un annuncio pubblicitario e non una pubblicazione giornalistica. Il contenuto di questa pagina non è stato valutato da alcuna autorità sanitaria. I prodotti e i metodi menzionati non sono destinati a diagnosticare, trattare, curare o prevenire alcuna malattia.</p>
+                    <h4>Risultati individuali</h4>
+                    <p>I risultati descritti non sono tipici. I risultati individuali variano in base a numerosi fattori tra cui genetica, stile di vita, dieta e condizioni di salute preesistenti. Le testimonianze e i casi studio presentati sono casi particolari e non rappresentano risultati medi o garantiti.</p>
+                    <h4>Consulenza medica</h4>
+                    <p>Le informazioni contenute in questo sito non sostituiscono il parere di un medico qualificato. Prima di apportare qualsiasi modifica alla propria dieta, routine di esercizio fisico o regime di integratori, consultare sempre il proprio medico o un professionista sanitario autorizzato.</p>
+                    <h4>Personaggi e storie</h4>
+                    <p>I personaggi, le storie e gli scenari descritti in questo sito sono illustrativi. Eventuali somiglianze con persone reali sono puramente casuali.</p>
+                    <h4>Proprietà intellettuale</h4>
+                    <p>È severamente vietato copiare o riprodurre immagini o testi di questo sito. I trasgressori saranno soggetti alle sanzioni legali applicabili.</p>
+                    <h4>Vendita vietata ai minori</h4>
+                    <p>La vendita è vietata alle persone di età inferiore ai 18 anni.</p>
+                </div>
+            </div>
+
+            <!-- TERMINI DI SERVIZIO -->
+            <div class="accordion-item">
+                <button class="accordion-btn" onclick="toggleAccordion(this)">
+                    Termini di Servizio <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <h4>Accettazione dei termini</h4>
+                    <p>Accedendo a questo sito web, l'utente accetta di essere vincolato dai presenti Termini di Servizio. Se non si accettano questi termini, si prega di non utilizzare il sito.</p>
+                    <h4>Uso del sito</h4>
+                    <p>Questo sito è fornito esclusivamente a scopo informativo ed educativo. L'utente si impegna a utilizzare il sito solo per scopi leciti e in conformità con le leggi applicabili.</p>
+                    <h4>Limitazione di responsabilità</h4>
+                    <p>Il proprietario del sito non sarà responsabile per danni diretti, indiretti, incidentali, speciali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare questo sito o i suoi contenuti.</p>
+                    <h4>Contenuto di terze parti</h4>
+                    <p>Questo sito può contenere link a siti web di terze parti. Non siamo responsabili del contenuto, delle politiche sulla privacy o delle pratiche di tali siti.</p>
+                    <h4>Modifiche ai termini</h4>
+                    <p>Ci riserviamo il diritto di modificare questi termini in qualsiasi momento. Le modifiche entrano in vigore immediatamente dopo la pubblicazione sul sito. L'uso continuato del sito costituisce accettazione dei termini modificati.</p>
+                    <h4>Legge applicabile</h4>
+                    <p>I presenti Termini di Servizio sono regolati dalla legge italiana. Qualsiasi controversia sarà sottoposta alla giurisdizione esclusiva dei tribunali italiani.</p>
+                    <h4>Contatti</h4>
+                    <p>Per qualsiasi domanda relativa ai presenti Termini di Servizio, contattarci all'indirizzo: <a href="mailto:contato@hyperelitedigital.com.br">contato@hyperelitedigital.com.br</a></p>
+                </div>
+            </div>
+
+            <!-- PRIVACY POLICY -->
+            <div class="accordion-item">
+                <button class="accordion-btn" onclick="toggleAccordion(this)">
+                    Informativa sulla Privacy <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <h4>Titolare del trattamento</h4>
+                    <p>Il titolare del trattamento dei dati personali è FONTS NEXUS LTDA, CNPJ 67.232.158/0001-68, Brasil. Contatto: <a href="mailto:contato@hyperelitedigital.com.br">contato@hyperelitedigital.com.br</a></p>
+                    <h4>Dati raccolti</h4>
+                    <p>Questo sito può raccogliere le seguenti categorie di dati:</p>
+                    <ul>
+                        <li>Dati di navigazione (indirizzo IP, tipo di browser, pagine visitate)</li>
+                        <li>Dati forniti volontariamente dall'utente (es. indirizzo email)</li>
+                        <li>Dati raccolti tramite cookie e tecnologie simili</li>
+                    </ul>
+                    <h4>Finalità del trattamento</h4>
+                    <p>I dati personali sono trattati per le seguenti finalità:</p>
+                    <ul>
+                        <li>Erogazione dei servizi richiesti</li>
+                        <li>Analisi statistica e miglioramento del sito</li>
+                        <li>Comunicazioni commerciali (previo consenso)</li>
+                        <li>Adempimento di obblighi legali</li>
+                    </ul>
+                    <h4>Base giuridica</h4>
+                    <p>Il trattamento dei dati si basa sul consenso dell'utente, sull'esecuzione di un contratto o sul legittimo interesse del titolare, conformemente al Regolamento UE 2016/679 (GDPR).</p>
+                    <h4>Conservazione dei dati</h4>
+                    <p>I dati personali sono conservati per il tempo strettamente necessario alle finalità per cui sono stati raccolti e comunque non oltre i termini previsti dalla legge.</p>
+                    <h4>Diritti dell'utente</h4>
+                    <p>In conformità con il GDPR, l'utente ha diritto a:</p>
+                    <ul>
+                        <li>Accedere ai propri dati personali</li>
+                        <li>Richiedere la rettifica o la cancellazione dei dati</li>
+                        <li>Opporsi al trattamento</li>
+                        <li>Richiedere la limitazione del trattamento</li>
+                        <li>Richiedere la portabilità dei dati</li>
+                        <li>Revocare il consenso in qualsiasi momento</li>
+                    </ul>
+                    <h4>Cookie</h4>
+                    <p>Questo sito utilizza cookie tecnici necessari al funzionamento e cookie analitici per migliorare l'esperienza dell'utente. Continuando la navigazione, l'utente acconsente all'uso dei cookie. È possibile disabilitare i cookie dalle impostazioni del browser.</p>
+                    <h4>Trasferimento dei dati</h4>
+                    <p>I dati personali potrebbero essere trasferiti a paesi terzi. In tal caso, ci assicuriamo che il trasferimento avvenga nel rispetto delle garanzie previste dal GDPR.</p>
+                    <h4>Reclami</h4>
+                    <p>L'utente ha il diritto di presentare reclamo all'autorità di controllo competente (Garante per la protezione dei dati personali - www.garanteprivacy.it).</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /ACCORDION -->
+
         <p style="margin-top: 18px;">&copy; 2025 Salute Oggi. Tutti i diritti riservati.</p>
     </div>
 </div>
 
 <script type="text/javascript" src="https://lp.elitehypefield.shop/pretrack.js?rtkcmpid=6a738bcb58d36ad955c9ceb8"></script>
+
+<script>
+function toggleAccordion(btn) {
+    var content = btn.nextElementSibling;
+    var isOpen = content.classList.contains('open');
+    // Fecha todos
+    document.querySelectorAll('.accordion-content').forEach(function(c) { c.classList.remove('open'); });
+    document.querySelectorAll('.accordion-btn').forEach(function(b) { b.classList.remove('open'); });
+    // Abre o clicado se estava fechado
+    if (!isOpen) {
+        content.classList.add('open');
+        btn.classList.add('open');
+    }
+}
+</script>
+
 </body>
 </html>
-
